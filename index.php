@@ -38,25 +38,14 @@
       ]
     ];
 
-    function filterByAuthor($books, $author)
-    {
-        $filteredBook = [];
-
-        foreach ($books as $book) {
-            # code...
-            if ($book['author'] === $author) {
-                # code...
-                $filteredBook[] = $book;
-            }
-        }
-
-        return $filteredBook;
-    }
+    $filteredBooks = array_filter($books, function ($book) {
+        return $book['releasedYear'] > 2000;
+    });
 
     ?>
 
     <ul>
-      <?php foreach (filterByAuthor($books, 'Andy Weir') as $book) : ?>
+      <?php foreach ($filteredBooks as $book) : ?>
        
         <li> 
           <a href="<?= $book['Website']?>"; >
