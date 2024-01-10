@@ -1,1 +1,1 @@
-# laracastapp
+# Posts App - Side Project
