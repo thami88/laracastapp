@@ -1,22 +1,16 @@
-  <?php
+<?php
 
-  $books = [
-    [
-    'name' => 'Do Androids Dream of Electric Sheep',
-    'author' => 'Philip K Dick',
-    'Website' => 'http://example.com',
-    'releasedYear' => 2015
-    ],
-    [
-    'name' => 'The Lanolins',
-    'author' => 'Andy Weir',
-    'Website' => 'http://example.com',
-    'releasedYear' => 2016
-    ]
-  ];
+require "functions.php";
+// require "router.php";
 
-$filteredBooks = array_filter($books, function ($book) {
-    return $book['releasedYear'] > 2000;
-});
+// connect to our database
+$dsn = "mysql:host=localhost;port=3306;dbname=myapp;user=root;password=admin;charset=utf8mb4;";
+$pdo = new PDO($dsn);
+$statement = $pdo->prepare("SELECT * FROM posts");
+$statement->execute();
 
-require "index.view.php";
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($posts as $post) {
+    echo "<li>" . $post['title'] . "</li>";
+}
