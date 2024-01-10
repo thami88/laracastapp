@@ -1,1 +1,1 @@
-# Posts App - Side Project
+# Posts App - Laravel Side Project
