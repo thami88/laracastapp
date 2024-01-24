@@ -2,13 +2,16 @@
 
 require "functions.php";
 require "Database.php";
-// require "router.php";
+require "Response.php";
+require "router.php";
 
-$config = require('config.php');
+// $id = $_GET['id'];
+// $query = "SELECT * FROM posts WHERE id = :id"; // :id wildcard
 
-$db = new Database($config['database']);
-$posts = $db->query("SELECT * FROM posts")->fetchAll();
+// $posts = $db->query($query, [':id' => $id])->fetch();
 
-foreach ($posts as $post) {
-    echo "<li>" . $post['title'] . "</li>";
-}
+// var_dump($posts);
+
+// foreach ($posts as $post) {
+//     echo "<li>" . $post['title'] . "</li>";
+// }
