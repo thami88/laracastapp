@@ -1,1 +1,1 @@
-# Posts App - Laravel Side Project
+# Notes Application - Laracast Php Side Project
