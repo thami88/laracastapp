@@ -29,9 +29,6 @@
                 <?php if (isset($errors['body'])) : ?>
                     <p class="text-red-500 text-xs mt-2"><?= $errors['body'] ?></p>
                 <?php endif; ?>
-            </div>
-            <p class="mt-3 text-sm leading-6 text-gray-600">Here's an idea for a new note....</p>
-            </div>
         </div>
         </div>
     </div>
