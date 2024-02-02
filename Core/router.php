@@ -9,9 +9,9 @@ class Router
     public function add($method, $uri, $controller)
     {
         $this->routes[] = [
+            'method' => $method,
             'uri' => $uri,
-            'controller' => $controller,
-            'method' => $method
+            'controller' => $controller
         ];
     }
 
@@ -38,7 +38,6 @@ class Router
     public function put($uri, $controller)
     {
         $this->add('PUT', $uri, $controller);
-
     }
 
     public function route($uri, $method)
