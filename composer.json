@@ -1,0 +1,17 @@
+{
+    "name": "thaminduliyanage/laracastapp",
+    "type": "project",
+    "authors": [
+        {
+            "name": "thami88",
+            "email": "thaminduliyanage97@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}
